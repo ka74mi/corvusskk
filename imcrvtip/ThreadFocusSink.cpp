@@ -16,6 +16,9 @@ STDAPI CTextService::OnSetThreadFocus()
 		_pInputModeWindow->_Show(TRUE);
 	}
 
+	//アプリケーションに戻ったとき、IME ONなら入力モードを表示する
+	_UpdateLanguageBar(!_IsKeyboardDisabled() && _IsKeyboardOpen());
+
 	return S_OK;
 }
 

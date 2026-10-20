@@ -33,7 +33,8 @@ STDAPI CTextService::OnSetFocus(ITfDocumentMgr *pdim, ITfDocumentMgr *pdimPrevFo
 		_pCandidateList->_Redraw();
 	}
 
-	_UpdateLanguageBar(FALSE);
+	//入力可能な場所にフォーカスが移ったとき、IME ONなら入力モードを表示する
+	_UpdateLanguageBar(pdim != nullptr && !_IsKeyboardDisabled() && _IsKeyboardOpen());
 
 	return S_OK;
 }

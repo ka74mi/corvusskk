@@ -3,7 +3,11 @@
 
 ![](installer/resource-md/logo.png) Windowsで動作するSKK風のIMEです。
 
+本リポジトリは、[nathancorvussolis/corvusskk](https://github.com/nathancorvussolis/corvusskk) をベースとしたフォークです。
 
+## 本フォークでの変更点
+
+- 入力状態遷移時に入力モードアイコンを表示する機能を追加
 
 ## インストール
 
